@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Test-project</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-cont">
+        <h1 class="header__headding">ZZZ</h1>
+        <button class="header__sign-out-button button disable">Вийти</button>
+      </div>
+    </header>
+    <main class="main">
+      <section>
+        <form class="main__form sign-in" action="#">
+          <h3 class="main__form-headding">Вхід</h3>
+          <label class="main__form-lable">
+            Логин
+            <input type="text" required placeholder="admin" />
+          </label>
+          <label class="main__form-lable">
+            Пароль
+            <input type="text" required placeholder="admin" />
+          </label>
+          <button class="main_sign-in-button button">Вхід</button>
+        </form>
+      </section>
+      <section>
+        <form class="main__form registration disable" action="#">
+          <h3 class="main__form-headding">Додати адміна</h3>
+          <label class="main__form-lable">
+            Логин
+            <input type="text" required placeholder="admin" />
+          </label>
+          <label class="main__form-lable">
+            Пароль
+            <input type="text" required placeholder="admin" />
+          </label>
+          <button class="main_registration-button button">Зареєструвати</button>
+        </form>
+      </section>
+      <section>
+        <table class="table disable">
+          <thead>
+            <tr>
+              <th>Логин</th>
+              <th>Дата</th>
+              <th><button class="table__button-add-admin button">Добавить</button></th>
+            </tr>
+          </thead>
+          <tbody class="table__tbody">
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">Всі права захищені(С)</p>
+    </footer>
+  </div>
+  <template id="template">
+    {{#each admins}}
+    <tr id={{id}}>
+      <td>{{admin}}</td>
+      <td>{{date}}</td>
+      <td><button class="button-delete button disable">Удалить</button></td>
+    </tr>
+    {{/each}}
+  </template>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
